@@ -19,6 +19,17 @@ class BankAccount:
         self.balance += interest
         print(f"Interest Added: {interest}\nCurrent Balance: {self.balance}")
 
+    def take_loan(self, amount):
+        if amount > self.balance * 2:
+            print("Loan amount too high! Maximum loan is twice your balance.")
+        else:
+            self.balance += amount
+            print(f"Loan of {amount} approved!")
+            print(f"Current balance: {self.balance}")
+
+            with open("Transaction.txt", "a") as f:
+                f.write(f"Loan taken: {amount}\n")
+
     def withdraw(self, amount):
         if amount > self.balance:
             print("Insufficient balance")
@@ -51,3 +62,4 @@ account.add_interest(5)
 account.deposit(10000)
 account.withdraw(100)
 account.transfer(200)
+account.take_loan(5000)

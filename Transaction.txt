@@ -36,3 +36,7 @@ Transferred 200
 Deposited 10000
 Deducted 100
 Transferred 200
+Deposited 10000
+Deducted 100
+Transferred 200
+Loan taken: 5000
