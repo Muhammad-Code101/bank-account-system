@@ -1,4 +1,3 @@
-# This is a half finished feature
 import random
 
 class BankAccount:
